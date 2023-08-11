@@ -27,7 +27,9 @@ class AuthServiceProvider extends ServiceProvider
         Passport::personalAccessTokensExpireIn(now()->addMonths(6));
 
         Passport::tokensCan([
-            'tech' => 'For Tech'
+            'user' => 'For User',
+            'tech' => 'For Tech',
+            'test' => 'For Test',
         ]);
     }
 }

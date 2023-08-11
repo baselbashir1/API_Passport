@@ -41,7 +41,27 @@ return [
             'provider' => 'users',
         ],
 
+        'user' => [
+            'driver' => 'session',
+            'provider' => 'users',
+        ],
+
+        'tech' => [
+            'driver' => 'session',
+            'provider' => 'techs',
+        ],
+
+        'test' => [
+            'driver' => 'session',
+            'provider' => 'tests',
+        ],
+
         'api' => [
+            'driver' => 'passport',
+            'provider' => 'users',
+        ],
+
+        'user-api' => [
             'driver' => 'passport',
             'provider' => 'users',
         ],
@@ -49,6 +69,11 @@ return [
         'tech-api' => [
             'driver' => 'passport',
             'provider' => 'techs',
+        ],
+
+        'test-api' => [
+            'driver' => 'passport',
+            'provider' => 'tests',
         ],
     ],
 
@@ -78,6 +103,11 @@ return [
         'techs' => [
             'driver' => 'eloquent',
             'model' => App\Models\Tech::class,
+        ],
+
+        'tests' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Test::class,
         ],
     ],
 
