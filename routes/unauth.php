@@ -16,4 +16,3 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::post('login', [AuthController::class, 'userLogin']);
-// Route::post('login', [AuthController::class, 'userLogin'])->middleware('auth:user-api');

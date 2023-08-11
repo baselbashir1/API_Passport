@@ -17,4 +17,6 @@ class Test extends Authenticatable
         'email',
         'password',
     ];
+
+    protected $guard = 'test';
 }

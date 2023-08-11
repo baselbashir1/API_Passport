@@ -72,3 +72,10 @@ php artisan config:clear
 
 php artisan config:cache
 ```
+
+## Add this to header in postman:
+
+```
+
+"Accept"=>"application/json"
+```

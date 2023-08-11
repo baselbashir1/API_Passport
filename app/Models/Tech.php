@@ -17,4 +17,6 @@ class Tech extends Authenticatable
         'email',
         'password',
     ];
+
+    protected $guard = 'tech';
 }
