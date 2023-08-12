@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\API\AuthController;
+use App\Http\Controllers\API\PersonalController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -16,4 +17,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/profile-details', [AuthController::class, 'userDetails']);
-Route::get('logout', [AuthController::class, 'logout']);
+Route::get('/logout', [AuthController::class, 'logout']);
+
+
+Route::post('/login', [PersonalController::class, 'login']);
+
+Route::middleware('auth:api')->get('/user', function (Request $request) {
+    return $request->user();
+});
+
+Route::get('/logout', [PersonalController::class, 'logout'])->middleware('auth:api');

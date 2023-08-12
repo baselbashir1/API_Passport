@@ -76,6 +76,12 @@ php artisan config:cache
 ## Add this to header in postman:
 
 ```
-
 "Accept"=>"application/json"
+```
+
+## Passport personal access client:
+
+```
+PASSPORT_PERSONAL_ACCESS_CLIENT_ID=#
+PASSPORT_PERSONAL_ACCESS_CLIENT_SECRET=###############
 ```
